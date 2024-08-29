@@ -1,0 +1,10 @@
+<header>
+    <h1 *ngIf="hasRoute('/')">{{title}}</h1>
+</header>
+<body> 
+   <app-logindetails *ngIf="hasRoute('/')"></app-logindetails>
+    <!--<app-loginbutton 
+        text="Log In"
+        (btnClick)="homepage()"
+    ></app-loginbutton>-->
+</body>

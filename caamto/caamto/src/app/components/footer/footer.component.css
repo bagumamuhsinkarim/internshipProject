@@ -1,0 +1,31 @@
+
+  /* Style the footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+  }
+  
+  /* Center the content within the footer */
+  .container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Style the footer content */
+  .footer-content {
+    padding: 20px;
+  }
+  
+  /* Add styles for links within the footer */
+  .footer-content a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Style for footer links on hover */
+  .footer-content a:hover {
+    text-decoration: underline;
+  }
+  

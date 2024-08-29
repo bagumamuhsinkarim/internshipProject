@@ -1,0 +1,19 @@
+<div class="t">
+    <table>
+        <tr>            
+            <th>HOSPITAL</th>
+            <th>mto</th>            
+            <th>Date</th>
+            <th>Patient</th>
+            <th>Invoice</th>
+        </tr>
+        <tr *ngFor="let x of BILLS">           
+            <td>{{x.HOSPITAL}}</td>
+            <td>{{x.mto}}</td>
+            <td>{{x.Date}}</td>
+            <td>{{x.Patient}}</td>            
+            <td>{{x.invoice}}</td>
+        </tr>
+    </table>
+    <input type="submit" value="Fetch BILLS" class="btn3" (click)="onFetchbILL()"/>
+</div>

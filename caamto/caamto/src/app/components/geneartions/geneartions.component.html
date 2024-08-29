@@ -1,0 +1,77 @@
+<form class="add-form" (ngSubmit)="onGen()">
+    <h1>GENERATE AN MTO</h1>
+    <div class="form-control">
+        <label 
+            for="patientName"
+            >Patient's Name:
+        </label>
+        <input 
+            [(ngModel)]="patName"
+            type="text" 
+            name="patName"
+            id="text" 
+            placeholder="Enter Patient's Name" 
+            required>
+    </div>
+   <div class="form-control">
+        <label 
+            for="staff"
+            >Staff:
+        </label>
+        <input 
+            [(ngModel)] ="staffName"
+            type="text" 
+            name="staId"
+            id="text" 
+            placeholder="Enter Staff's name" 
+            required>
+    </div>
+    <div class="form-control">
+        <label 
+            for="hospitalName"
+            >Hospital Name:
+        </label>
+        <input 
+            [(ngModel)]="hosptName"
+            type="text" 
+            name="hosptName"
+            id="text" 
+            placeholder="Enter Hospital to attend" 
+            required>
+    </div>
+    <div class="form-control">
+        <label 
+            for="date"
+            >Date:
+        </label>
+        <input 
+            [(ngModel)]="dates"
+            type="text" 
+            name="dates"
+            id="text" 
+            placeholder="yyyy-mm-dd" 
+            required>
+    </div>
+    <input type="submit" value="Generate" class="btn"/>
+</form>
+<div class="t">
+    <table>
+        <tr>
+            <th>#</th>
+            <th>mto</th>
+            <th>Patient Name</th>
+            <th>Hospital Name</th>
+            <th>Date</th>
+            <th>Staff Name</th>
+        </tr>
+        <tr *ngFor="let x of last10Mtos; index as i">
+            <td>{{i + 1}}</td>
+            <td>{{x.mto}}</td>
+            <td>{{x.patName}}</td>
+            <td>{{x.hosptName}}</td>
+            <td>{{x.dates}}</td>
+            <td>{{x.staffName}}</td>
+        </tr>
+    </table>
+    <input type="submit" value="Fetch MTO" class="btn3" (click)="onFetch()"/>
+</div>
